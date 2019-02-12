@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p>Entree's: </br>
+	Cheeseburger: $10 </br>
+	Alfredo Chicken: $13 </br>
+	Bratwurst: $7 </br>
+	Beetloaf: $19
+</p>
+
+<p id="main"></p>
+<p>Click the button to order your Entree:</p>
+<button onclick="myMain()">Main dish</button>
+
+<script>
+	function myMain() {
+		var text;
+		var mainDish = prompt("What sounds good to you?", "Type Order Here");
+
+		switch(mainDish) {
+			case "Alfredo Chicken":
+				text = "Excellent choice. Comfort food is good for your soul." + "</br>That costs: $13";
+				let alfredoChicken = 13
+				break;
+			case "Cheeseburger":
+				text = "Cheeseburger Andy Warhol style!:)"+ "</br>That costs: $10";
+				let cheeseburger = 10
+				break;
+			case "Bratwurst":
+				text = "Bratwurst is my favorite too!"+ "</br>That costs: $7";
+				let bratWurst = 7
+				break;
+			case "Beetloaf":
+				text = "Really? Are you sure the Beetloaf is your favorite?"+ "</br>That costs: $19";
+				let beetLoaf = 19
+				break;
+			default:
+				text = "We don't serve that here...";
+		}
+		document.getElementById("main").innerHTML = text;
+	}
+
+</script>
+
+</body>
+</html>
